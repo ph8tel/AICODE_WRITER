@@ -23,8 +23,8 @@ def main():
     while True:
         question = input('Describe your desired code')
         put_table([
-            ['Q:', question],
-            ['A:', put_code(openai_response(question))]
+            ['Description:', question],
+            ['Code:', put_code(openai_response(question), language="typescript")]
         ])
 
 if __name__ == '__main__':
