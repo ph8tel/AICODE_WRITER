@@ -26,6 +26,10 @@ def main():
             ['Description:', question],
             ['Code:', put_code(openai_response(question), language="typescript")]
         ])
+def applyToQuote(id):
+    print('endpoint hit')
+    return id
+
 
 if __name__ == '__main__':
     port = os.environ.get("PORT", 8080)
