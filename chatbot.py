@@ -29,7 +29,7 @@ def index():
         ])
 def applyToQuote():
     print('endpoint hit')
-    return JSONEncoder(openai_response('What is five plus 7? '))
+    return openai_response('What is five plus 7? ')
 
 
 if __name__ == '__main__':
