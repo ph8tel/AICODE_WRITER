@@ -33,4 +33,4 @@ def applyToQuote(id):
 
 if __name__ == '__main__':
     port = os.environ.get("PORT", 8080)
-    start_server(main, port=port, debug=True)
+    start_server([main, applyToQuote], port=port, debug=True)
