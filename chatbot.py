@@ -1,4 +1,5 @@
 
+from json import JSONEncoder
 import openai
 from pywebio import start_server
 from pywebio.output import put_table, put_code
@@ -28,7 +29,7 @@ def index():
         ])
 def applyToQuote():
     print('endpoint hit')
-    return 'hi'
+    return JSONEncoder(openai_response('What is five plus 7? '))
 
 
 if __name__ == '__main__':
