@@ -19,18 +19,18 @@ def openai_response(question):
     print(response, '{}'.format(response.choices[0].text[6:]))
     # return '{}'.format(response.choices[0].text[6:])
     return response.choices[0].text
-def main():
+def index():
     while True:
         question = input('Describe your desired code')
         put_table([
             ['Description:', question],
             ['Code:', put_code(openai_response(question), language="typescript")]
         ])
-def applyToQuote(id):
+def applyToQuote():
     print('endpoint hit')
-    return id
+    return 'hi'
 
 
 if __name__ == '__main__':
     port = os.environ.get("PORT", 8080)
-    start_server([main, applyToQuote], port=port, debug=True)
+    start_server([index, applyToQuote], port=port, debug=True)
